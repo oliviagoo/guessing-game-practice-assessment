@@ -1,6 +1,6 @@
 #olivia g 17/3/20
-#version 2
-#in this version I will let the user guess until they get the number right
+#version 3
+#in this version I will give the user helpful hints about their guess
 
 #importing the random module
 import random
@@ -19,5 +19,10 @@ while True:
         break
     else:
         print("Incorrect")
+        if guess < num:
+            print("The number is higher!")
+        #if the guess isn't the number and isn't lower, it must be higher
+        else:
+            print("The number is lower!")
 
 
