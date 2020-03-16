@@ -1,6 +1,6 @@
 #olivia g 17/3/20
-#version 1
-#in this version I will check if input is the same as a random number
+#version 2
+#in this version I will let the user guess until they get the number right
 
 #importing the random module
 import random
@@ -11,11 +11,13 @@ num = random.randint(1, 100)
 #printing the number for testing
 print(num)
 
-#input
-guess = int(input("Guess what number I am thinking of: "))
+#trying until the user gets it right
+while True:
+    guess = int(input("Guess what number I am thinking of: "))
+    if guess == num:
+        print("Correct")
+        break
+    else:
+        print("Incorrect")
 
-#output
-if guess == num:
-    print("Correct")
-else:
-    print("Incorrect")
+
