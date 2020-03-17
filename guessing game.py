@@ -1,13 +1,20 @@
-#olivia g 17/3/20
-#version 4
-#in this version I will count and limit the number of guesses
+#olivia g 18/3/20
+#version 5
+#in this version I will add easy and hard modes
 
 #importing the random module
 import random
 
-#setting a guess limit of 10, and setting up guess counter
-GUESSES = 10
-guess_num = GUESSES
+#setting a guess limit of 10 or 4, depending on the mode
+EASY_GUESS = 10
+HARD_GUESS = 4
+
+#getting the user to choose what mode they want
+mode = input("Would you like to play easy mode (10 guesses) or hard mode (4 guesses). Enter E or H: ").strip().lower()
+if mode == "e":
+    guess_num = EASY_GUESS
+else:
+    guess_num = HARD_GUESS
 
 #getting and storing random number
 num = random.randint(1, 100)
