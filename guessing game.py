@@ -32,6 +32,8 @@ def guess_input(msg):
             print("Please enter a valid whole number.")
     return guess
 
+#main routine
+
 #setting a guess limit of 10 or 4, depending on the mode
 EASY_GUESS = 10
 HARD_GUESS = 4
